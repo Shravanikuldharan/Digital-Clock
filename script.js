@@ -1,6 +1,7 @@
 let time = document.getElementById("time");
 let day = document.getElementById("day");
 let midday = document.getElementById("midday");
+let dateElement = document.getElementById("date"); // Add this line
 
 let clock = setInterval(
     function calcTime(){
@@ -11,7 +12,12 @@ let clock = setInterval(
         let middayValue = "AM"
         let days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
         
+        let months = ["January", "February", "March", "April", "May", "June",
+                      "July", "August", "September", "October", "November", "December"];
+
         day.textContent = days[date_now.getDay()];
+        let dateString = months[date_now.getMonth()] + " " + date_now.getDate() + ", " + date_now.getFullYear();
+        dateElement.textContent = dateString;
 
         middayValue = (hr >= 12) ? "PM" : "AM";
 
@@ -19,7 +25,7 @@ let clock = setInterval(
             hr = 12;
         }
         else if(hr > 12){
-            hr-=12;
+            hr -= 12;
         }
 
         hr = (hr < 10) ? "0" + hr : hr;
@@ -28,5 +34,5 @@ let clock = setInterval(
 
         time.textContent = hr + ":" + min + ":" + sec;
         midday.textContent = middayValue;
-    },1000
+    }, 1000
 );

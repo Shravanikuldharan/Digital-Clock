@@ -15,7 +15,7 @@ body{
     left: 50%;
     top: 50%;
 }
-.container *{
+.container{
     color: #ffffff;
     font-family: "Roboto Mono",monospace;
 }
@@ -33,6 +33,13 @@ body{
     text-transform: uppercase;
     color: #c5c5c5;
     text-align: center;
+    margin-bottom: 10px;
+}
+#date {
+    font-size: 18px;
+    color: #c5c5c5;
+    text-align: center;
+    margin-bottom: 10px;
 }
 .wrapper{
     text-align: center;
@@ -46,8 +53,8 @@ body{
     font-size: 30px;
 }
 .shape1{
-    height: 200px;
-    width: 200px;
+    height: 180px;
+    width: 180px;
     position: absolute;
     background: linear-gradient(
         45deg,
@@ -56,12 +63,12 @@ body{
     );
     border-radius: 50%;
     z-index: -1;
-    bottom: 76px;
-    right: -100px;
+    bottom: 160px;
+    right: -90px;
 }
 .shape2{
-    height: 200px;
-    width: 200px;
+    height: 180px;
+    width: 180px;
     position: absolute;
     background: linear-gradient(
         135deg,
@@ -69,7 +76,7 @@ body{
         #3ebdf0
     );
     border-radius: 50%;
-    top: 100px;
+    top: 140px;
     left: -100px;
     z-index: -1;
 }
